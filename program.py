@@ -7,13 +7,15 @@ logging.basicConfig(filename="logging.log",level=logging.DEBUG,filemode="w")
 
 def main():
     number_of_disks = 5
+    move_number = 0
     first_tower = [i for i in range(number_of_disks,0,-1)]
     second_tower = []
     last_tower = []
     towers = [first_tower,second_tower,last_tower]
     logging.debug("Main fuction is started")
+    
     while True:
-        getASCIITowers(towers=towers,number_of_disks=number_of_disks)
+        PrintASCIITowers(towers=towers,number_of_disks=number_of_disks,move_number=move_number)
         choose_towers = input('выберите башни:')
         
         if checkMove(towers=towers,
@@ -24,6 +26,18 @@ def main():
             logging.debug(f'{choose_towers} is correct')
             makeMove(towers=towers,
                      selected_towers=choose_towers)
+            move_number += 1
+        
+        if (len(second_tower) == number_of_disks) or (len(last_tower) == number_of_disks):
+            try:
+                os.system('cls')
+            except:
+                os.system('clear')
+            print("вы победили")
+            break
+            # Победное условие
+            # если вторая третья башня заполнены всеми элементами
+            # то игра завершается
 
 
 # Функция сохраняет удаленный из донора элемент 
@@ -35,7 +49,6 @@ def makeMove(towers,selected_towers):
     acceptor_tower = int(selected_towers[-1]) - 1
     deleted_element = towers[donor_tower].pop()
     towers[acceptor_tower].append(deleted_element)
-
 
 #   FIXME
 # Для этой функции необходимо составить нормальное описание
@@ -71,8 +84,7 @@ def checkMove(towers,selected_towers):
 
 # FIXME
 # Выглядит очень непонятно исправляй, дружок
-
-def getASCIITowers(towers,number_of_disks):
+def PrintASCIITowers(towers,number_of_disks,move_number):
     try:
         os.system('cls')
     except:
@@ -100,6 +112,6 @@ def getASCIITowers(towers,number_of_disks):
     for i in range(number_of_disks-1,-1,-1):
         print(f"{tower_elements[towers[0][i]]}{tower_elements[towers[1][i]]}{tower_elements[towers[2][i]]}")
     print((" "*9 + "/\\" + " "*9) * 3)
-    print(towers)
+    print(f"{move_number} ходов")
 
 main()
