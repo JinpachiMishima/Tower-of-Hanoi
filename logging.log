@@ -1,6 +1,69 @@
 DEBUG:root:Main fuction is started
-DEBUG:root:Insert choose is not correct
-DEBUG:root:donor is not zero and acceptor is a zero
+DEBUG:root:lenght acceptor is a zero, but donor is not zero
 DEBUG:root:12 is correct
-DEBUG:root:donor is a zero
-DEBUG:root:donor is a zero
+DEBUG:root:lenght acceptor is a zero, but donor is not zero
+DEBUG:root:13 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:23 is correct
+DEBUG:root:lenght acceptor is a zero, but donor is not zero
+DEBUG:root:12 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:31 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:32 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:12 is correct
+DEBUG:root:lenght acceptor is a zero, but donor is not zero
+DEBUG:root:13 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:23 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:21 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:31 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:23 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:13 is correct
+DEBUG:root:lenght acceptor is a zero, but donor is not zero
+DEBUG:root:12 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:32 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:31 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:23 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:21 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:31 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:13 is correct
+DEBUG:root:lenght acceptor is a zero, but donor is not zero
+DEBUG:root:12 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:31 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:12 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:23 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:31 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:23 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:13 is correct
+DEBUG:root:lenght acceptor is a zero, but donor is not zero
+DEBUG:root:12 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:31 is correct
+DEBUG:root:donor >= acceptor
+DEBUG:root:21 is not correct
+DEBUG:root:donor >= acceptor
+DEBUG:root:31 is not correct
+DEBUG:root:donor < acceptor
+DEBUG:root:32 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:12 is correct
+DEBUG:root:donor < acceptor
+DEBUG:root:31 is correct
