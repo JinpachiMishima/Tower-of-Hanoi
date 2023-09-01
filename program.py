@@ -1,3 +1,4 @@
+# https://docs.google.com/document/d/1sVX6KWRo6qZg1To6Sw5sIaVK99CniqoczJO64CSFaJ0/edit?usp=sharing
 import logging
 import os
 logging.basicConfig(filename="logging.log",level=logging.DEBUG,filemode="w")
@@ -28,6 +29,8 @@ def main():
 # Функция сохраняет удаленный из донора элемент 
 # и добавляет его в акцептор
 def makeMove(towers,selected_towers):
+    # донором будет считаться башня с которой будет забираться
+    # диск, а акцептором башня на которую будет класться диск
     donor_tower = int(selected_towers[0]) - 1
     acceptor_tower = int(selected_towers[-1]) - 1
     deleted_element = towers[donor_tower].pop()
