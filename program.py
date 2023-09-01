@@ -75,6 +75,9 @@ def getASCIITowers(towers,number_of_disks):
     except:
         os.system('clear')
 
+    # Так как в этом случае нам не нужно менять основной массив
+    # мы его просто копируем и добовляем нули до максимальной 
+    # длины. Чтобы отображать было проще
     towers = towers.copy()
     for i,tower in enumerate(towers):
         towers[i] = tower + [0] * (number_of_disks - len(tower))
@@ -87,6 +90,9 @@ def getASCIITowers(towers,number_of_disks):
                       5: "    =====||=====    "
         }
     
+    # Отображение башенок в консоли.
+    # Сначала отображается верхушка после чего построчно каждая 
+    # башенка отдельно. В конце добавляются ножки
     print("         /\         "*3)
     for i in range(number_of_disks-1,-1,-1):
         print(f"{tower_elements[towers[0][i]]}{tower_elements[towers[1][i]]}{tower_elements[towers[2][i]]}")
