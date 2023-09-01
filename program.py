@@ -95,7 +95,7 @@ def checkMove(towers,selected_towers):
     if towers[donor_tower][-1] < towers[acceptor_tower][-1]:
         return True
 
-#
+# Функция для вывода башень в консоль
 def PrintASCIITowers(towers,number_of_disks,move_number):
     """
     Функция предназначена для того, чтобы на  основе  полученных  массивов
@@ -134,5 +134,5 @@ def PrintASCIITowers(towers,number_of_disks,move_number):
     print((" "*9 + "/\\" + " "*9) * 3)
     print(f"{move_number} ходов")
 
-main()
-
+if __name__ == "__main__":
+    main()
