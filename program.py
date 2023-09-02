@@ -24,7 +24,7 @@ def main():
         
         choose_towers = input("выберите башни:") 
         # Условие корректности ввода
-        if checkMove(towers=towers,
+        if isValidMove(towers=towers,
                      selected_towers=choose_towers) == False:  
             
             continue
@@ -57,7 +57,7 @@ def makeMove(towers,selected_towers):
     towers[acceptor_tower].append(deleted_element)
 
 # Функция проверяет введенный пользователем значения башень
-def checkMove(towers,selected_towers):
+def isValidMove(towers,selected_towers):
     """
     Функция предназначена для проверки выбранных  пользователем  башень. На
     выбор пользователя три значения для  башень. И в зависсимости от  того,
@@ -70,10 +70,13 @@ def checkMove(towers,selected_towers):
     перенос не возможен по условию игры. В случае  если  последний  элемент
     донорской башни чем акцепторской, то перенос возможен.
     """
+    # Если пользователь вводит пустое значение
+    if len(selected_towers.split()) == 0:
+        return False
     correct_input = ["1","2","3"]
     donor_tower = selected_towers[0]
     acceptor_tower = selected_towers[-1]
-    if donor_tower not in correct_input and acceptor_tower not in correct_input:
+    if donor_tower not in correct_input or   acceptor_tower not in correct_input:
         return False
     
     # действительные индексы массивов на 1 меньше чем ввод пользователя
